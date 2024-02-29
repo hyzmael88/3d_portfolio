@@ -1,0 +1,1 @@
+instalamos @react-three/fiber
