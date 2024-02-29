@@ -1,1 +1,8 @@
 instalamos @react-three/fiber
+https://github.com/pmndrs/react-three-fiber
+
+instalamos @react-three/drei
+https://github.com/pmndrs/drei
+
+instalamos @react-spring/three
+https://github.com/pmndrs/react-spring
