@@ -6,12 +6,11 @@ import Island from '@/models/Island'
 import Sky from '@/models/Sky'
 import Bird from '@/models/Bird'
 import Plane from '@/models/Plane'
+import HomeInfo from '@/components/HomeInfo'
 
 
 function Home() {
-    {/* <div className='absolute top-28 left-0 right-0 z-10 flex items justify-center'>
-        POPUP
-    </div> */}
+  
 
     const [currentStage, setCurrentStage] = useState(1);
 
@@ -54,6 +53,12 @@ function Home() {
     <section
     className='w-full h-screen relative'
     >
+        <div className='absolute top-28 left-0 right-0 z-10 flex items justify-center'>
+       {
+        currentStage && <HomeInfo
+        currentStage={currentStage}/>
+       }
+    </div> 
         <Canvas className={`w-full h-screen bg-transparent ${isRotating ? 'cursor-grabbing' : 'cursor-grab'}`}
         camera={{near:0.1, far:1000}}
         >
@@ -66,7 +71,9 @@ function Home() {
                {/*  <spotLight/>   */} 
                 <hemisphereLight skyColor="#b11e1ff" groundColor='#000000'/>
                 <Bird/>
-              <Sky/>
+              <Sky
+              isRotating={isRotating}
+              />
                 <Island
                 position={islandPosition}
                 scale={islandScale}
