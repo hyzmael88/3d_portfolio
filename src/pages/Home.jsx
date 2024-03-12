@@ -13,6 +13,8 @@ function Home() {
         POPUP
     </div> */}
 
+    const [currentStage, setCurrentStage] = useState(1);
+
     const [isRotating, setIsRotating] = useState(false)
 
     const adjustIslandForScreenSize = () =>{
@@ -45,7 +47,7 @@ function Home() {
 
 
   const [islandScale, islandPosition, islandRotation] = adjustIslandForScreenSize()
-  
+
   const [planeScale, planePosition] = adjustPlaneForScreenSize()
 
   return (
@@ -71,6 +73,7 @@ function Home() {
                 rotation = {islandRotation}
                 isRotating={isRotating}
                 setIsRotating={setIsRotating}
+                setCurrentStage={setCurrentStage}
 
                 />
                 <Plane

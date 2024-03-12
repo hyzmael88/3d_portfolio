@@ -6,3 +6,8 @@ https://github.com/pmndrs/drei
 
 instalamos @react-spring/three
 https://github.com/pmndrs/react-spring
+
+const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+    lastX.current = clientX
+
+    nos sirve para guardar la posicion de x ademas de que nos dice si fue un toque con el dedo o con mouse

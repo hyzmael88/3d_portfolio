@@ -3,13 +3,13 @@ import React from 'react'
 
 const planceScene = "/3d/plane.glb";
 
-function Plane() {
+function Plane({isRotating, ...props}) {
 
     const {scene, animations} = useGLTF(planceScene)
 
   return (
 
-    <mesh>
+    <mesh {...props}>
         <primitive object={scene}/>
     </mesh>
   )
